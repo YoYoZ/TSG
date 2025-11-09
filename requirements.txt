@@ -1,3 +1,17 @@
-requests>=2.31.0
+# YASNO Bot - Python Dependencies
+
+# Telegram Bot API
 python-telegram-bot>=20.0
-python-dotenv>=1.0.0
+
+# HTTP клієнт для API запитів
+requests>=2.28.0
+
+# Парсинг HTML (опціонально)
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# SQLite (вбудована в Python, але можеш встановити окремо)
+# sqlite3
+
+# Утиліти
+python-dotenv>=0.20.0  # Для .env файлів

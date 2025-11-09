@@ -19,16 +19,9 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Environment variables
-.env
-.env.local
-.env.*.local
 
 # IDE
 .vscode/
@@ -38,18 +31,28 @@ share/python-wheels/
 *~
 .DS_Store
 
-# Database
+#環境
+.env
+.env.local
+.env.*.local
+
+# База данных
 *.db
 *.sqlite
 *.sqlite3
 
-# Logs
+# Логи
 *.log
 logs/
 
+# Дані
+data/
+*.db-journal
+
 # Docker
 .dockerignore
+docker-compose.override.yml
 
-# Project specific
-data/
-users.db
+# Git
+.git/
+.gitignore
