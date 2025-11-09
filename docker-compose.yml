@@ -1,0 +1,21 @@
+
+version: '3.8'
+
+services:
+  yasno-bot:
+    build: .
+    container_name: yasno-bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    volumes:
+      - ./data:/app/data  # 📌 PERSIST STORAGE - сохраняет базу данных!
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:
+    driver: local
